@@ -24,66 +24,7 @@ window.onscroll = ()=> {
 
 
 
-// function newTypeWriter(){
-//     // Typewriter effect
-    
-//     let words = ['branding','social media presence', 'website design'];
-//     let txt = 'Lorem ipsum typing effect!'; /* The text */
-//     let speed = 1000; /* The speed/duration of the effect in milliseconds */
-//     for(let i = 0; i < words.length; i++){
-//        // console.log("herererer")
-//         for(let j = 0; j<words[i].length; j++){
-            
-//             setTimeout(()=>{
-//                 console.log("herereresdfsdfr")    
-//                 document.getElementById("typewriter").innerHTML += words[i].charAt(j);
-//             },speed);
-//         }
-//         for(let k = words[i].length; k > 0; k--){
-//             setTimeout(()=>{
-//                 temp = document.getElementById("typewriter").innerHTML;
-//                 document.getElementById('typewriter').innerHTML =  temp.slice(0,-1);
-//             }, speed);
-//         }
-//     }
 
-// }
-
-
-
-// function typeWriter() {
-
-//    if(j < words.length) 
-//         if (i < words[j].length) {
-//             document.getElementById("typewriter").innerHTML += words[j].charAt(i);
-//             i++;
-//             setTimeout(typeWriter, speed);
-//         } else {
-//             let temp = '';
-//             for(let n = 0; n < words[j].length; n++){
-//                 console.log("here")
-//                 temp = document.getElementById("typewriter").innerHTML;
-                
-//                 setTimeout(()=>{
-//                     console.log("here dude");
-//                     document.getElementById('typewriter').innerHTML =  temp.slice(0,-1);
-                   
-                    
-//                     }, 100);
-//             }
-//             j ++;
-//             i = 0;
-//             setTimeout(typeWriter, speed);
-//         }
-//     else{
-//         j = 0;
-//         i = 0;
-
-//     }
-// }
-
-// //typeWriter();
-// newTypeWriter();
 
 // Add animation to services icons
 let servIcons = document.querySelectorAll("#services .row .column");
@@ -103,33 +44,57 @@ servIcons.forEach(function(icon){
         ic.classList.remove("animate__pulse");
     })
 }); 
-//console.log(servIcons);
 
-// let i = 0;
-// let j= 0;
-// let reverse = false;
-// let words = ['branding    ','social media presence    ', 'website design   '];
-// let speed = 100; /* The speed/duration of the effect in milliseconds */
-// setInterval(function(){
-//     if(reverse){
-//         if(j === 0){
-//             reverse = false;
-//             i++;
-//             if(i === words.length) {
-//                 i = 0;
-//             }
-//         } else {
-//             let temp = document.getElementById("typewriter").innerHTML;
-//                 document.getElementById('typewriter').innerHTML =  temp.slice(0,-1);
-//                 j--;
-//         }
+// // Add about animation
+// let scrollpos = window.scrollY; // window scroll position
+// let wh = window.innerHeight-50; // as soon as element touches bottom with offset event starts
+// let element = document.querySelector("#about"); //element
+
+// window.addEventListener('scroll', function(){ 
+//     if(scrollpos > (element.offsetTop - wh)){
+//         console.log("here dude");
+//         element.classList.add("animate__animated");
+//         element.classList.add("animate__heartBeat");
 //     } else {
-//         if(j === words[i].length){
-//             reverse = true;
-//         } else {
-//             document.getElementById("typewriter").innerHTML += words[i].charAt(j);
-//             j++;
-//         }
+//         console.log("Im here");
+//         element.classList.remove("animate__animated");
+//         element.classList.remove("animate__heartBeat");
 //     }
-    
-// },speed);
+// });
+
+let scrollpos = window.scrollY
+  const about = document.querySelectorAll("#about");
+  const el_to_effect = document.querySelectorAll('.heart_beat');
+  console.log(about[0].offsetHeight);
+  const elementHeight = about[0].offsetHeight + 500;
+
+  const add_class_on_scroll = () => {
+      console.log("here");
+      for(let i = 0; i < el_to_effect.length; i++){
+          
+            
+            el_to_effect[i].classList.add("animate__animated");
+            el_to_effect[i].classList.add("animate__heartBeat");
+            
+            console.log(el_to_effect[i]);
+          
+      }
+      
+    }
+  const remove_class_on_scroll = () => {
+      console.log("here i am");
+    for(let i = 0; i < el_to_effect.length; i++){
+        el_to_effect[i].classList.remove("animate__animated");
+        el_to_effect[i].classList.remove("animate__heartBeat");
+        el_to_effect[i].classList.remove("text-primary");
+    }
+    }
+
+  window.addEventListener('scroll', function() { 
+    scrollpos = window.scrollY;
+
+    if (scrollpos >= elementHeight) { add_class_on_scroll() }
+    else { remove_class_on_scroll() }
+
+    console.log(scrollpos)
+  })

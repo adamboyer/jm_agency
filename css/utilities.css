@@ -5,7 +5,11 @@
 }
 
 .text-secondary {
-  color: #0284d0;
+  color: #e0473d;
+}
+
+.text-pink {
+  color: #d522c6;
 }
 
 /* Button */
@@ -36,7 +40,7 @@
 
 .btn-secondary,
 .bg-secondary {
-  background-color: #0284d0;
+  background-color: #e0473d;
   color: #fff;
 }
 
@@ -152,4 +156,8 @@
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
+}
+
+.heart_beat {
+  display: inline-block;
 }
