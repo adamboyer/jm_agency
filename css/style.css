@@ -159,13 +159,31 @@ img {
 #services p {
   margin: 20px 0;
 }
+#services h1 {
+  padding: 40px 0;
+  font-size: 3rem;
+  font-weight: 400;
+}
 
 #services a {
   margin: 20px 0;
 }
-
+#services .section-header {
+  padding-bottom: 0px;
+}
 #services .column:hover {
   background: #d3d3d3;
+}
+
+#services hr {
+  display: block;
+  height: 1px;
+  width: 200px;
+  border: 0;
+  border-top: 3px solid #333;
+  margin: 1rem auto;
+
+  padding-top: 20px;
 }
 
 /* About section */
@@ -202,7 +220,75 @@ img {
   font-weight: 400;
 }
 
+#about hr {
+  display: block;
+
+  height: 1px;
+  width: 200px;
+  border: 0;
+  border-top: 3px solid #e0473d;
+  margin: 1rem auto;
+  padding: 20px 0 30px;
+}
+
 #about p {
   font-size: 1.6rem;
   font-weight: 300;
+}
+.heart_beat {
+  display: inline-block;
+}
+
+/* Portfolio */
+#portfolio {
+  padding: 20px 0 40px;
+}
+
+#portfolio header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#portfolio h1 {
+  padding: 40px 0;
+  font-size: 3rem;
+  font-weight: 400;
+}
+#portfolio img {
+  height: 40vh;
+}
+
+#portfolio hr {
+  display: block;
+  height: 1px;
+  width: 200px;
+  border: 0;
+  border-top: 3px solid #333;
+  margin: 1rem auto;
+
+  padding: 20px 0 30px;
+}
+
+.portfolio-gallary {
+  padding-top: 10px;
+}
+
+.portfolio .btn {
+  margin: 50px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+/*adding zoomout animation */
+.hover03 figure img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.hover03 figure:hover img {
+  -webkit-transform: scale(0.75);
+  transform: scale(0.75);
 }

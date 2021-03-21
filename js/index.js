@@ -65,28 +65,28 @@ servIcons.forEach(function(icon){
 let scrollpos = window.scrollY
   const about = document.querySelectorAll("#about");
   const el_to_effect = document.querySelectorAll('.heart_beat');
-  console.log(about[0].offsetHeight);
+  
   const elementHeight = about[0].offsetHeight + 500;
 
   const add_class_on_scroll = () => {
-      console.log("here");
+      
       for(let i = 0; i < el_to_effect.length; i++){
           
             
             el_to_effect[i].classList.add("animate__animated");
             el_to_effect[i].classList.add("animate__heartBeat");
             
-            console.log(el_to_effect[i]);
+            
           
       }
       
     }
   const remove_class_on_scroll = () => {
-      console.log("here i am");
+      
     for(let i = 0; i < el_to_effect.length; i++){
         el_to_effect[i].classList.remove("animate__animated");
         el_to_effect[i].classList.remove("animate__heartBeat");
-        el_to_effect[i].classList.remove("text-primary");
+        
     }
     }
 
@@ -96,5 +96,5 @@ let scrollpos = window.scrollY
     if (scrollpos >= elementHeight) { add_class_on_scroll() }
     else { remove_class_on_scroll() }
 
-    console.log(scrollpos)
+    
   })
