@@ -2,20 +2,26 @@
 
 // Navbar animation
 const navbar = document.getElementById('navbar');
+const mobileNav = document.getElementById('mobile-nav');
 let scrolled = false;
 
 window.onscroll = ()=> {
     if(window.pageYOffset > 100) {
         navbar.classList.remove('top');
+        mobileNav.classList.remove('top');
         if(!scrolled) {
             navbar.style.transform = 'translateY(-70px)';
+            mobileNav.style.transform = 'translateY(-70px)';
+            
         }
         setTimeout(()=>{
             navbar.style.transform = 'translateY(0)';
+            mobileNav.style.transform = 'translateY(0)';
             scrolled  = true;
         }, 200)
     } else {
         navbar.classList.add('top');
+        mobileNav.classList.add('top');
         scrolled = false;
     }
 }
