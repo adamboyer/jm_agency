@@ -337,6 +337,24 @@ img {
     display: none;
   }
 
+  #myVideo {
+    display: none;
+  }
+
+  #mobile-background {
+    display: block;
+    background: url(../images/mobile-hero-3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    height: 100%;
+    z-index: -1;
+  }
+
   #mobile-nav {
     display: flex;
     flex-direction: row;
