@@ -48,7 +48,7 @@ body.lb-disable-scrolling {
   border-radius: 4px;
 
   /* Background color behind image.
-     This is visible during transitions. */
+       This is visible during transitions. */
   background-color: white;
 }
 
@@ -91,10 +91,11 @@ body.lb-disable-scrolling {
 
 .lb-nav a {
   outline: none;
-  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
 }
 
-.lb-prev, .lb-next {
+.lb-prev,
+.lb-next {
   height: 100%;
   cursor: pointer;
   display: block;

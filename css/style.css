@@ -1,5 +1,10 @@
 /* Some color to maybe use later #bd136c */
 
+:root {
+  --primary-color: #7512bd;
+  --secondary-color: #e0473d;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,6 +16,7 @@ body {
   background: #fff;
   color: #333;
   line-height: 1.6;
+  z-index: 2;
 }
 
 ul {
@@ -29,11 +35,41 @@ h2 {
 }
 
 p {
-  margin: 10px;
+  margin: 20px;
 }
 
 img {
   width: 100%;
+}
+/* Utitlies */
+.container {
+  margin: auto;
+  max-width: 1100px;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #7512bd;
+  border: none;
+  border-radius: 5px;
+  max-width: 150px;
+}
+.btn-secondary {
+  background-color: #e0473d;
+  color: #fff;
 }
 
 /* Navbar */
@@ -148,15 +184,22 @@ img {
 }
 
 /* Services Section */
-#services .column {
-  display: flex;
+.services {
+  background: #fff;
+}
+.services .services-grid {
+  display: grid;
+  grid-template-columns: 1;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 50px;
+}
+.services .services-grid .service-sections {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-#services i {
+.services i {
   background: #7512bd;
   color: #fff;
   border-radius: 50%;
@@ -164,26 +207,26 @@ img {
   margin-bottom: 30px;
 }
 
-#services p {
+.services p,
+.services a {
   margin: 20px 0;
 }
-#services h1 {
+
+.services h1 {
   padding: 40px 0;
   font-size: 3rem;
   font-weight: 400;
 }
 
-#services a {
-  margin: 20px 0;
+.service-sections div {
+  padding: 50px;
 }
-#services .section-header {
-  padding-bottom: 0px;
-}
-#services .column:hover {
+
+.service-sections div:hover {
   background: #d3d3d3;
 }
 
-#services hr {
+.services hr {
   display: block;
   height: 1px;
   width: 200px;
@@ -193,12 +236,11 @@ img {
 
   padding-top: 20px;
 }
-
 /* About section */
 
-#about .parrellax {
+.about {
   position: relative;
-  background: url("/resources/parallax.png");
+  background: url("/img/parallax.png");
   height: 100%;
   width: 100%;
   background-attachment: fixed;
@@ -209,7 +251,7 @@ img {
   -moz-background-size: cover;
   -webkit-background-size: cover;
 }
-#about .parrellax::before {
+.about::before {
   content: "";
   position: absolute;
   top: 0;
@@ -219,19 +261,25 @@ img {
   background: rgba(0, 0, 0, 0.6);
 }
 
-#about .content {
+.about .about-grid {
   position: relative;
   z-index: 1;
   min-height: 400px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 1.5rem 0;
 }
 
-#about h1 {
+.about h1 {
   padding: 40px 0;
   font-size: 3rem;
   font-weight: 400;
 }
 
-#about hr {
+.about hr {
   display: block;
 
   height: 1px;
@@ -242,7 +290,7 @@ img {
   padding: 20px 0 30px;
 }
 
-#about p {
+.about p {
   font-size: 1.6rem;
   font-weight: 300;
 }
@@ -250,32 +298,45 @@ img {
   display: inline-block;
 }
 
-/* Portfolio */
-#portfolio {
-  padding: 20px 0 40px;
+.about .btn:first-child {
+  margin-top: 1.5rem;
+}
+.about .btn {
+  display: flex;
+  justify-self: center;
+  margin-bottom: 1.5rem;
 }
 
-#portfolio header {
+/* Portfolio */
+.portfolio {
+  padding: 20px 0 40px;
+  background: #fff;
+}
+
+.portfolio header {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-#portfolio .btn {
+.portfolio .btn {
   text-align: center;
 }
 
-#portfolio h1 {
+.portfolio h1 {
   padding: 40px 0;
   font-size: 3rem;
   font-weight: 400;
 }
-#portfolio img {
-  height: 40vh;
+.portfolio img {
+  height: 100vh;
+  max-height: 300px;
+  width: 100%;
+  max-width: 400px;
 }
 
-#portfolio hr {
+.portfolio hr {
   display: block;
   height: 1px;
   width: 200px;
@@ -287,7 +348,22 @@ img {
 }
 
 .portfolio-gallary {
-  padding-top: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-gap: 1rem;
+}
+
+.portfolio-gallary .hover03 {
+  font-size: 0;
+  transition: all 0.5s ease-in;
+}
+.portfolio-gallary .hover03:hover {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
 }
 
 .portfolio .btn {
@@ -298,6 +374,8 @@ img {
 
 /* Footer */
 .footer {
+  background: #333;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -329,10 +407,6 @@ img {
 
 /* Smartphones */
 @media (max-width: 768px) {
-  .flex-items {
-    flex-direction: column;
-  }
-
   #navbar {
     display: none;
   }
@@ -343,7 +417,7 @@ img {
 
   #mobile-background {
     display: block;
-    background: url(../images/mobile-hero-2.jpg) no-repeat;
+    background: url(../img/mobile-hero-2.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     position: fixed;
@@ -402,20 +476,40 @@ img {
     color: rgba(0, 0, 0, 0.8);
   }
 
-  .flex-columns .column,
-  .flex-grid .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-  #about .btn {
-    display: block;
-
-    margin: 0;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 20px;
-  }
   .btn {
     width: 150px;
+  }
+
+  .services .services-grid .service-sections {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .portfolio p {
+    font-size: 1.4rem;
+  }
+  .portfolio .portfolio-gallary {
+    grid-template-columns: 1fr;
+  }
+  .portfolio .portfolio-gallary img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1100px) {
+  .services .services-grid .service-sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio p {
+    font-size: 1.4rem;
+  }
+  .portfolio .portfolio-gallary {
+    grid-template-columns: 1fr;
+  }
+  .portfolio .portfolio-gallary img {
+    height: 100%;
+    width: 100%;
   }
 }

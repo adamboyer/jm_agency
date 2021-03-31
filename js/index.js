@@ -101,7 +101,7 @@ hamburger.addEventListener('click',()=>{
 
 
 // Add animation to services icons
-let servIcons = document.querySelectorAll("#services .row .column");
+let servIcons = document.querySelectorAll(".services .service-sections div");
 // Adding event listeners
 servIcons.forEach(function(icon){
     icon.addEventListener('mouseenter',()=>{
@@ -137,7 +137,7 @@ servIcons.forEach(function(icon){
 // });
 
 let scrollpos = window.scrollY
-  const about = document.querySelectorAll("#about");
+  const about = document.querySelectorAll(".about");
   const el_to_effect = document.querySelectorAll('.heart_beat');
   
   const elementHeight = about[0].offsetHeight + 500;

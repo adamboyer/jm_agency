@@ -1,4 +1,0 @@
-Use these SFTP credentials to upload files with FileZilla/WinSCP/rsync:
-    Host: 143.198.232.50
-    User: nodejs
-    Pass: 8a52e1d62183c6d189881b2bcb211e97
