@@ -304,6 +304,7 @@ img {
 .about .btn {
   display: flex;
   justify-self: center;
+  text-align: center;
   margin-bottom: 1.5rem;
 }
 
@@ -413,6 +414,10 @@ img {
 
   #myVideo {
     display: none;
+  }
+
+  header .content .social i {
+    color: var(--secondary-color);
   }
 
   #mobile-background {
