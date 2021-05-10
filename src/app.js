@@ -18,11 +18,11 @@ app.use(express.static(path.join(__dirname, '../public')))
 
 
 app.get('', (req, res) => {
-    res.render('index')
+    res.render('index', {name: 'index'})
 })
 
 app.get('/about', (req, res) => {
-    res.render('about')
+    res.render('about', {name: 'about'})
 })
 
 app.listen(port, () => {

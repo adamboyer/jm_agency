@@ -1,0 +1,336 @@
+/* Header */
+.hero {
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+#myVideo {
+  position: fixed;
+  object-fit: cover;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 20px;
+}
+.hero .content h1 {
+  font-size: 55px;
+  margin-bottom: 50px;
+}
+
+.hero .content h2 {
+  margin-bottom: 75px;
+  border-right: 0.2rem solid #777;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero * {
+  z-index: 10;
+}
+
+.navbar {
+  z-index: 100;
+}
+
+.hero .content .social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .content .social a {
+  margin-right: 40px;
+}
+
+.hero .content .social a:first-child {
+  margin-left: 40px;
+}
+
+.hero .content .social a:hover {
+  color: #7512bd;
+}
+
+/* Services Section */
+.services {
+  background: #fff;
+}
+.services .services-grid {
+  display: grid;
+  grid-template-columns: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.services .services-grid .service-sections {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.services i {
+  background: #7512bd;
+  color: #fff;
+  border-radius: 50%;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.services p,
+.services a {
+  margin: 20px 0;
+}
+
+.services h1 {
+  padding: 40px 0;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.service-sections div {
+  padding: 50px;
+}
+
+.service-sections div:hover {
+  background: #d3d3d3;
+}
+
+.services hr {
+  display: block;
+  height: 1px;
+  width: 200px;
+  border: 0;
+  border-top: 3px solid #333;
+  margin: 1rem auto;
+
+  padding-top: 20px;
+}
+/* About section */
+
+.about {
+  position: relative;
+  background: url("/images/parallax.png");
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+}
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.about .about-grid {
+  position: relative;
+  z-index: 1;
+  min-height: 400px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 1.5rem 0;
+}
+
+.about h1 {
+  padding: 40px 0;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.about hr {
+  display: block;
+
+  height: 1px;
+  width: 200px;
+  border: 0;
+  border-top: 3px solid #e0473d;
+  margin: 1rem auto;
+  padding: 20px 0 30px;
+}
+
+.about p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.heart_beat {
+  display: inline-block;
+}
+
+.about .btn:first-child {
+  margin-top: 1.5rem;
+}
+.about .btn {
+  display: flex;
+  justify-self: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Portfolio */
+.portfolio {
+  padding: 20px 0 40px;
+  background: #fff;
+}
+
+.portfolio header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.portfolio .btn {
+  text-align: center;
+}
+
+.portfolio h1 {
+  padding: 40px 0;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.portfolio img {
+  height: 100vh;
+  max-height: 300px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.portfolio hr {
+  display: block;
+  height: 1px;
+  width: 200px;
+  border: 0;
+  border-top: 3px solid #333;
+  margin: 1rem auto;
+
+  padding: 20px 0 30px;
+}
+
+.portfolio-gallary {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-gap: 1rem;
+}
+
+.portfolio-gallary .hover03 {
+  font-size: 0;
+  transition: all 0.5s ease-in;
+}
+.portfolio-gallary .hover03:hover {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+.portfolio .btn {
+  margin: 50px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+/*adding zoomout animation */
+.hover03 figure img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.hover03 figure:hover img {
+  -webkit-transform: scale(0.75);
+  transform: scale(0.75);
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+  #myVideo {
+    display: none;
+  }
+
+  header .content .social i {
+    color: var(--secondary-color);
+  }
+
+  #mobile-background {
+    display: block;
+    background: url(../images/mobile-hero-2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .btn {
+    width: 150px;
+  }
+
+  .services .services-grid .service-sections {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .portfolio p {
+    font-size: 1.4rem;
+  }
+  .portfolio .portfolio-gallary {
+    grid-template-columns: 1fr;
+  }
+  .portfolio .portfolio-gallary img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1100px) {
+  .services .services-grid .service-sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio p {
+    font-size: 1.4rem;
+  }
+  .portfolio .portfolio-gallary {
+    grid-template-columns: 1fr;
+  }
+  .portfolio .portfolio-gallary img {
+    height: 100%;
+    width: 100%;
+  }
+}
