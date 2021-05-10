@@ -75,7 +75,7 @@ hamburger.addEventListener('click',()=>{
         mobileNav.style.height = "100vh";
         
         setTimeout(()=>{
-           console.log(mbNavLinks)
+           
            for(let i = 0; i < mbNavLinks.children.length; i++){
                mbNavLinks.children[i].firstElementChild.style.color = "#fff";
            }

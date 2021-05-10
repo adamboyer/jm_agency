@@ -1,194 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+{{>header}}
+<header class="hero">
+    {{>nav}}
+    <div class="content">
+        <video autoplay loop muted playsinline webkit-playsinline id="myVideo">
+            <source src="images/background.mp4" type="video/mp4">
+        </video>
+        <div id="mobile-background"></div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-    <!-- Google fonts: Roboto -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <!-- Animate.css CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="css/utilities.css">
-    <link rel="stylesheet" href="css/lightbox.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>JM Agency | Digital Marketing</title>
-
-</head>
-
-<body id="home">
-    <header class="hero">
-        <div id="navbar" class="navbar top">
-            <h1 class="logo">
-                JM | Agency
-            </h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="index.html">Services</a></li>
-                    <li><a href="index.html">Portfolio</a></li>
-                    <li><a href="index.html">Contact</a></li>
-                </ul>
-            </nav>
+        <h1>Digital Markteting Agency</h1>
+        <h2 id="typewriter">Let us help you <span class="txt-type" data-wait="3000"
+                data-words='["design a logo","expand your social media presence","build a beautiful website"]'></span>
+        </h2>
+        <div class="social">
+            <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
+            <a href="#"><i class="fab fa-whatsapp fa-3x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-3x"></i></a>
         </div>
-        <div id="mobile-nav" class="top">
-
-            <h1 class="logo column">
-                JM | Agency
-            </h1>
-            <i id="hamburger" class="fas fa-bars fa-2x"></i>
-            <div class="break"></div>
-
-            <nav>
-                <ul id="mobile-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="index.html">Services</a></li>
-                    <li><a href="index.html">Portfolio</a></li>
-                    <li><a href="index.html">Contact</a></li>
-                </ul>
-            </nav>
-
-        </div>
-        <div class="content">
-            <video autoplay loop muted playsinline webkit-playsinline id="myVideo">
-                <source src="images/background.mp4" type="video/mp4">
-            </video>
-            <div id="mobile-background"></div>
-
-            <h1>Digital Markteting Agency</h1>
-            <h2 id="typewriter">Let us help you <span class="txt-type" data-wait="3000"
-                    data-words='["design a logo","expand your social media presence","build a beautiful website"]'></span>
-            </h2>
-            <div class="social">
-                <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
-                <a href="#"><i class="fab fa-whatsapp fa-3x"></i></a>
-                <a href="#"><i class="fab fa-youtube fa-3x"></i></a>
-            </div>
-        </div>
-    </header>
-    <section class="services bg-light">
-        <div class="container">
-            <div class="services-grid">
-                <header>
-                    <h1>Our Services</h1>
-                    <hr>
-                </header>
-                <div class="service-sections">
-                    <div>
-                        <i class="far fa-comments serv-icon fa-3x"></i>
-                        <h3>Stratigic Advice</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit labore, vero enim facilis
-                            assumenda tempora!</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                    <div>
-                        <i class="fas fa-meteor serv-icon fa-3x "></i>
-                        <h3>Branding</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit labore, vero enim facilis
-                            assumenda tempora!</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                    <div>
-                        <i class="fas fa-hashtag serv-icon fa-3x"></i>
-                        <h3>Marketing</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit labore, vero enim facilis
-                            assumenda tempora!</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                    <div>
-                        <i class="fas fa-pencil-ruler serv-icon fa-3x"></i>
-                        <h3>Website Design</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit labore, vero enim facilis
-                            assumenda tempora!</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <section class="bg-dark about">
-        <div class="container">
-            <div class=" about-grid content section-padding">
-
-                <h1><span class="heart_beat text-secondary">About JM Agency</span></h1>
-                <hr>
-
-                <p><strong class="heart_beat text-secondary">We promote brands</strong> through digital media, such as:
-                    social networks, web pages, blogs or also e-mail marketing.</p>
-                <br>
-                <p>Through <strong class="heart_beat text-secondary">Our digital marketing, advertising and design
-                        services</strong> we help entrepreneurs and bussinesses; through the application of techniques
-                    and strategies according to the behavior of the market and the postion of the brand.</p>
-                <br>
-                <br>
-                <a href="#" class="btn btn-secondary margin-right">Learn More</a>
-                <a href="#" class="btn btn-secondary margin-left">Contact Us</a>
-                <br>
-                <br>
-            </div>
-
-        </div>
-
-    </section>
-    <section class="portfolio bg-light">
-        <div class="container">
+    </div>
+</header>
+<section class="services bg-light">
+    <div class="container">
+        <div class="services-grid">
             <header>
-                <h1>Some of our recent projects</h1>
-
+                <h1>Our Services</h1>
+                <hr>
             </header>
-            <hr>
-            <div class="portfolio-gallary">
-                <div class="hover03">
-                    <a href="images/branding-project.jpg" data-lightbox="portfolio" data-title="A branding project">
-                        <figure><img src="/images/branding-project.jpg" alt=""></figure>
-                    </a>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, ipsam.</p>
+            <div class="service-sections">
+                <div>
+                    <i class="far fa-comments serv-icon fa-3x"></i>
+                    <h3>Stratigic Advice</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit labore, vero enim facilis
+                        assumenda tempora!</p>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
-                <div class="hover03">
-                    <a href="images/web-design-project.jpg" data-lightbox="portfolio" data-title="A web design project">
-                        <figure><img src="/images/web-design-project.jpg" alt=""></figure>
-                    </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, illo.</p>
+                <div>
+                    <i class="fas fa-meteor serv-icon fa-3x "></i>
+                    <h3>Branding</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit labore, vero enim facilis
+                        assumenda tempora!</p>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
-                <div class="hover03">
-                    <a href="images/marketing-project.jpg" data-lightbox="portfolio" data-title="A marketing project">
-                        <figure><img src="/images/marketing-project.jpg" alt=""></figure>
-                    </a>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, deleniti?</p>
+                <div>
+                    <i class="fas fa-hashtag serv-icon fa-3x"></i>
+                    <h3>Marketing</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit labore, vero enim facilis
+                        assumenda tempora!</p>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
-                <div class="hover03">
-                    <a href="images/strategy-project.jpg" data-lightbox="portfolio" data-title="A strategy project">
-                        <figure><img src="/images/strategy-project.jpg" alt=""></figure>
-                    </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, repudiandae.</p>
+                <div>
+                    <i class="fas fa-pencil-ruler serv-icon fa-3x"></i>
+                    <h3>Website Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit labore, vero enim facilis
+                        assumenda tempora!</p>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
             </div>
-            <a href="#" class="btn btn-primary">Visit Portfolio</a>
+        </div>
+    </div>
 
-    </section>
+</section>
+<section class="bg-dark about">
+    <div class="container">
+        <div class=" about-grid content section-padding">
+
+            <h1><span class="heart_beat text-secondary">About JM Agency</span></h1>
+            <hr>
+
+            <p><strong class="heart_beat text-secondary">We promote brands</strong> through digital media, such as:
+                social networks, web pages, blogs or also e-mail marketing.</p>
+            <br>
+            <p>Through <strong class="heart_beat text-secondary">Our digital marketing, advertising and design
+                    services</strong> we help entrepreneurs and bussinesses; through the application of techniques
+                and strategies according to the behavior of the market and the postion of the brand.</p>
+            <br>
+            <br>
+            <a href="#" class="btn btn-secondary margin-right">Learn More</a>
+            <a href="#" class="btn btn-secondary margin-left">Contact Us</a>
+            <br>
+            <br>
+        </div>
 
     </div>
 
+</section>
+<section class="portfolio bg-light">
+    <div class="container">
+        <header>
+            <h1>Some of our recent projects</h1>
 
-    <footer class="footer bg-dark">
-        <div class="social">
-            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
-            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        </header>
+        <hr>
+        <div class="portfolio-gallary">
+            <div class="hover03">
+                <a href="images/branding-project.jpg" data-lightbox="portfolio" data-title="A branding project">
+                    <figure><img src="/images/branding-project.jpg" alt=""></figure>
+                </a>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, ipsam.</p>
+            </div>
+            <div class="hover03">
+                <a href="images/web-design-project.jpg" data-lightbox="portfolio" data-title="A web design project">
+                    <figure><img src="/images/web-design-project.jpg" alt=""></figure>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, illo.</p>
+            </div>
+            <div class="hover03">
+                <a href="images/marketing-project.jpg" data-lightbox="portfolio" data-title="A marketing project">
+                    <figure><img src="/images/marketing-project.jpg" alt=""></figure>
+                </a>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, deleniti?</p>
+            </div>
+            <div class="hover03">
+                <a href="images/strategy-project.jpg" data-lightbox="portfolio" data-title="A strategy project">
+                    <figure><img src="/images/strategy-project.jpg" alt=""></figure>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, repudiandae.</p>
+            </div>
         </div>
-        <br>
-        <p>Copyright &copy; 2021 - JM Agency</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
-    <script src="js/lightbox.js"></script>
-    <script src="js/typewriter.js"></script>
-</body>
+        <a href="#" class="btn btn-primary">Visit Portfolio</a>
 
-</html>
+</section>
+
+</div>
+
+{{>footer}}
