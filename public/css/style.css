@@ -240,7 +240,7 @@ img {
 
 .about {
   position: relative;
-  background: url("/img/parallax.png");
+  background: url("/images/parallax.png");
   height: 100%;
   width: 100%;
   background-attachment: fixed;
@@ -422,7 +422,7 @@ img {
 
   #mobile-background {
     display: block;
-    background: url(../img/mobile-hero-2.jpg) no-repeat;
+    background: url(../images/mobile-hero-2.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     position: fixed;
