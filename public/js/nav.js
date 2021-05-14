@@ -4,7 +4,7 @@ const mobileNav = document.getElementById('mobile-nav');
 let scrolled = false;
 
 window.onscroll = ()=> {
-    if(window.pageYOffset > 100) {
+    if(window.pageYOffset > 75) {
         navbar.classList.remove('top');
         mobileNav.classList.remove('top');
         if(!scrolled) {
@@ -58,6 +58,7 @@ function enableScrolling(){
 const mbNavLinks = document.getElementById("mobile-links");
 const hamburger = document.getElementById("hamburger");
 let currenHt = null, currnSym = null, currenBg = null;
+let currentTextColor = "#ccc", currentHBcolor="#333";
 
 
 hamburger.addEventListener('click',()=>{
@@ -68,6 +69,10 @@ hamburger.addEventListener('click',()=>{
         mbNavLinks.style.display = "flex";
         currenBg = mobileNav.style.background;
         currenHt = mobileNav.style.height;
+        currentTextColor = mobileNav.style.color;
+        currentHBcolor = hamburger.style.color;
+        mobileNav.style.color = "#fff";
+        hamburger.style.color = "#fff";
         mobileNav.style.backgroundColor = "#7512bd";
         mobileNav.style.opacity = 1;
         mobileNav.style.height = "100vh";
@@ -84,6 +89,8 @@ hamburger.addEventListener('click',()=>{
         mobileNav.style.background = currenBg;
         mobileNav.style.height = currenHt;
         hamburger.classList = currnSym;
+        hamburger.style.color = currentHBcolor;
+        mobileNav.style.color = currentTextColor;
         mobileNav.style.opacity = 0.8;
         for(let i = 0; i < mbNavLinks.children.length; i++){
             mbNavLinks.children[i].firstElementChild.style.color = "#08333333";
