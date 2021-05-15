@@ -5,6 +5,11 @@
   color: #333;
 }
 
+p {
+  margin-left: 0;
+}
+
+/* Header section */
 .about-header {
   display: grid;
   grid-template-columns: auto auto;
@@ -26,10 +31,12 @@
   border-radius: 5px 20px 5px;
 }
 
+/* Objectives section */
+
 .about-obj {
   display: grid;
   grid-template-columns: auto auto auto;
-  margin-bottom: 40px;
+  margin-bottom: 65px;
   width: 100%;
 }
 .about-obj-text {
@@ -37,20 +44,74 @@
   margin-right: 30px;
 }
 
-/* .about-obj ul li {
+.about-obj-objs {
   display: grid;
+  gap: 1rem;
   grid-template-columns: auto auto;
 }
 
-.about-obj ul {
+/* Mission section */
+.about-mission {
   display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+
+/* width="480" height="280"  */
+.about-mission-video video {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-mission-text {
+  margin-right: 24px;
+}
+
+.about-mission-text ul li {
+  display: grid;
+  gap: 0.75rem;
+  justify-content: space-evenly;
   grid-template-columns: auto auto;
 }
 
-.about-obj ul li > div {
-  margin-right: 16px;
+.about-mission-text ul li i {
+  grid-row: 1 / span 2;
 }
 
-.about-obj ul li p {
-  margin: 0;
-} */
+hr {
+  display: block;
+  height: 1px;
+  width: 200px;
+  border: 0;
+  border-top: 3px solid #333;
+  margin: 1rem auto;
+
+  padding-top: 20px;
+}
+
+/* Smartphones */
+
+@media (max-width: 768px) {
+  .about-header {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .about-header-img {
+    display: none;
+  }
+  .about-obj {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .about-mission {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .about-mission .about-mission-video {
+    grid-row: 1/1;
+  }
+}
